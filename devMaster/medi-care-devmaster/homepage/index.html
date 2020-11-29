@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<title>MediCaretaker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.buttonActive{
+    background-color: rgb(0, 81, 255);
+}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: rgba(6, 57, 145, 0.781);}
+#main {margin-left: 120px}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-blue">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="MC LOGO.png" style="width:100%">
+  <div w3-blue>MEDICARETAKER</div>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT WEBAPP</p>
+  </a>
+  <a href="#med" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>DISEASES AND MEDICINES</p>
+  </a>
+  <a href="#insurance" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>MEDICAL INSURANCE</p>
+  </a>
+  <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-drivers-license-o w3-xxlarge"></i>
+    <p>MEDICAL DASHBOARD</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-blue w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#med" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div align="center" class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <img src="MEDICARETAKER.png" alt="MediCaretaker">
+  <br>
+  <header class="w3-container w3-padding-32 w3-opacity w3-center w3-blue" id="particles-js" style="border-radius: 10%; height: 500px;;background-image: url('https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/assets/2017/06/27494/image1170x530cropped.jpg');">
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-white">ABOUT</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p class="w3-text-black" style="font-size: large;font-style:normal;">
+    <strong>A large body of evidence confirms that many people 
+    in the developing world go without health care from which they
+     could benefit greatly. The poor in developing countries are 
+     even less likely than the better off to receive effective 
+     health care. Concern for the level and distribution of health
+      in the developing world demands that measures be taken to 
+      redress both facts. What are these measures? What measures 
+      can increase the utilization of effective health care, 
+      particularly by the poor in developing countries?</strong>
+      <br><br><strong>
+      A number of hospitals are now switching to electronic health 
+      record (EHR) software as their primary repository of patient
+       files. Nursing departments now utilize appointment scheduling
+        software for better tracking and scheduling of shifts. Medical
+        equipment management software is also being used to monitor 
+        patients in the ICUs.These are just some of the healthcare 
+        softwares being utilized in hospitals and other healthcare 
+        facilities.</strong>
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">Healthcare statistics</h3>
+    <iframe src="https://ourworldindata.org/grapher/life-expectancy-vs-healthcare-expenditure?xScale=log&endpointsOnly=1&time=1995..2014" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+    <br>
+    
+    
+    <!-- Grid for pricing tables -->
+    <div class="w3-row-padding" style="margin:0 -16px" id="med">
+        <h2 class="w3-text-white">DISEASES AND MEDICINES</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <br><br>
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            <h1 class="margin">Disease Prediction And Medicine Recommendation</h1>
+            <hr>
+            <h3>Click on the required symptoms</h3>
+            <h2></h2>
+          <p>Enter a minimum of two symptoms</p>
+          </li>
+          <li class="w3-padding-16">
+            <button id = "button1" class="w3-button w3-hover-black" onclick = "changeColour1()">Fever</button>
+            <button id = "button2"class="w3-button w3-hover-black" onclick = "changeColour2()">Cough </button>
+            <button id = "button3"class="w3-button w3-hover-black" onclick = "changeColour3()">Runny nose </button>
+            <button id = "button4"class="w3-button w3-hover-black" onclick = "changeColour4()">Headache </button>
+        </li>
+          <li class="w3-padding-16">
+            <button id = "button5"class="w3-button w3-hover-black" onclick = "changeColour5()">Breathlessness </button>
+            <button id = "button6" class="w3-button w3-hover-black" onclick = "changeColour6()">Diarrhea </button>
+            <button id = "button7"class="w3-button w3-hover-black" onclick = "changeColour7()">Abdominal pain </button>
+          </li>
+          <li class="w3-padding-16">
+            <button id = "button9"class="w3-button w3-hover-black" onclick = "changeColour9()">Nosebleeding </button>
+            <button id = "button10"class="w3-button w3-hover-black" onclick = "changeColour10()">Dizziness </button>
+            <button id = "button11" class="w3-button w3-hover-black" onclick = "changeColour11()">Insomnia </button>
+          </li>
+          <li class="w3-padding-1">
+            <button id = "button13"class="w3-button w3-hover-black" onclick = "changeColour13()">Redness in eye</button>
+            <button id = "button14"class="w3-button w3-hover-black" onclick = "changeColour14()">Nausea </button>
+            <button id = "button15"class="w3-button w3-hover-black" onclick = "changeColour15()">Sweating </button>
+            <button id = "button16"class="w3-button w3-hover-black" onclick = "changeColour16()">Fatigue </button>
+          </li>
+          <li>
+            <button id = "button17"class="w3-button w3-hover-black" onclick = "changeColour17()">Joint pain </button>
+            <button id = "button8"class="w3-button w3-hover-black" onclick = "changeColour8()">Vomiting </button>
+            <button id = "button12"class="w3-button w3-hover-black" onclick = "changeColour12()">Eye swelling</button>
+          </li>
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            <form id="theForm" method="POST">
+                <input id="btn" name=btn value="Hello_World" style="display:none"> 
+                <input type="button" value="Submit" onclick="display()" class="w3-button w3-blue">
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-half w3-margin-bottom">
+          <br><br><br><br><br><br><br><br>
+        <ul class="w3-ul w3-white w3-center w3-hover-opacity-off">
+          <li>
+                <h1>Selected Symptoms</h1>
+                <p id = "para"></p>
+              </li>
+          <li>
+            <h1>Probable disease</h1>
+            <p id="disname"></p>
+          </li>
+          <li>
+            <h1>Medicine Required</h1>
+            <p id="medname"></p>
+          </li>
+          <li>
+            <h1>Dosage Required</h1>
+            <p id="dosname"></p>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    <h3 class="w3-text-black">Disclaimer: This system gives only a probable prediction of what the disease may be. Pls contact a medical personnal for accurate results! </h3>
+    <br>
+    <br>
+
+    <!-- Grid for pricing tables -->
+    <div class="w3-row-padding" style="margin:0 -16px" id="insurance">
+        <h2 class="w3-text-white">HEALTH INSURANCE</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <br>
+            <p style="font-size: larger;color: black;">
+              <strong>Majority of rural people live below poverty line
+              and they are not capable of affording the expenses on medical
+              needs. Health insurance is a tough task for these people. The
+              condition of illness not only deprived them from earning but
+              also pushes them into deep debt.
+            <br><br>
+            Health insurance can play a crucial role in preventing
+            people from burden of debts. Insurance can provide them
+            support at the time of emergency and needs. The
+            government has introduced many health insurance schemes for
+            rural people during past years with affordable prices so that
+            they can be covered by insurance without much burden on
+            them.</strong>
+            </p>
+    <br><br>
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            <h1 class="margin">Medical Insurance Prediction</h1>
+            <hr>
+            <h3>Predict the cost for your Medical Insurance!</h3>
+          </li>
+          <li class="w3-padding-16">
+            <label for="first_name" style="font-size: 20px"><b>Age</b></label>
+            <br>
+            <input placeholder="Age" name="age" id="age" type="text" class="validate">
+        </li>
+          <li class="w3-padding-16">
+            <label for="_name" style="font-size: 20px"><b>Gender</b></label>
+            <br>
+            <input id="_name" name="Gender" placeholder="0 - Male / 1 - Female" type="text" class="validate">
+          </li>
+          <li class="w3-padding-16">
+            <label for="last_name" style="font-size: 20px"><b>BMI</b></label>
+              <br>
+            <input id="bmi" name="bmi" placeholder="BMI"  type="text" class="validate">
+          </li>
+          <li class="w3-padding-1">
+            <label for="last_name" style="font-size: 20px"><b>Childrens</b></label>
+              <br>
+            <input id="children" name="children" placeholder="0 for None"  type="text" class="validate">
+          </li>
+          <li>
+            <label for="smoker" style="font-size: 20px"><b>Smoking</b></label>
+            <br>
+            <input id="smoker" name="smoker" placeholder="1 - Yes / 0 - No" type="text" class="validate">
+          </li>
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            <form id="theForm" method="POST">
+                <input id="btn" name=btn value="Hello_World" style="display:none"> 
+                <input type="button" value="Submit" onclick="displayins()" class="w3-button w3-blue">
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-half w3-margin-bottom">
+          <br><br><br><br><br><br><br><br>
+        <ul class="w3-ul w3-white w3-center w3-hover-opacity-off">
+          <li>
+                <h1>Insurance Premium Per Annum</h1>
+                <h3 id = "prem"></h3>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    <h3 class="w3-text-black">Disclaimer: This system gives only a probable prediction of what the disease may be. Pls contact a medical personnal for accurate results! </h3>
+    
+  </div>
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="https://www.oneindia.com/img/2014/07/18-rural-doctor.jpg" style="width:50%">
+    <img class="mySlides" src="https://lh3.googleusercontent.com/proxy/WiWsJFlB4_uWwVYVZW4Hh-NHr1buweJMmohcR8LUOH-WDfTQrZFBQq0auLes0DrQVhRPb_YXG5NQsaYeTXg7v9n4aAjl6Uo6GxsO05RYO79o8ZHNDPgvmKAhx2fjSWPNctPJ" style="width:50%">
+    <img class="mySlides" src="https://www.dailyexcelsior.com/wp-content/uploads/2017/12/cha.jpg" style="width:50%">
+    <img class="mySlides" src="https://th.thgim.com/opinion/op-ed/aa3x06/article28917368.ece/alternates/FREE_435/Th09-Parley-Prasad-1" style="width:50%">
+  
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  </script>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <p> MADE BY J K VISHWAJEET AT IVYHACKS 2020</p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+
+
+<script>
+    var symptoms = [];
+    
+    function changeColour1() {
+       var element = document.getElementById("button1");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Fever");
+       
+    }
+    
+    function changeColour2() {
+       var element = document.getElementById("button2");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Cough");
+       
+    }
+    
+    function changeColour3() {
+       var element = document.getElementById("button3");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Runny nose");
+       
+    }
+    
+    function changeColour4() {
+       var element = document.getElementById("button4");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Headache");
+       
+    }
+    
+    function changeColour5() {
+       var element = document.getElementById("button5");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Breathlessness");
+       
+    }
+    
+    function changeColour6() {
+       var element = document.getElementById("button6");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Diarrhea");
+       
+    }
+    
+    function changeColour7() {
+       var element = document.getElementById("button7");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Abdominal pain");
+    }
+    
+    function changeColour8() {
+       var element = document.getElementById("button8");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Vomiting");
+    }
+    
+    function changeColour9() {
+       var element = document.getElementById("button9");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Nosebleed");
+    }
+    
+    function changeColour10() {
+       var element = document.getElementById("button10");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Dizziness");
+    }
+    
+    function changeColour11() {
+       var element = document.getElementById("button11");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Insomnia");
+    }
+    
+    function changeColour12() {
+       var element = document.getElementById("button12");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Eye swelling");
+    }
+    
+    function changeColour13() {
+       var element = document.getElementById("button13");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Redness in eye");
+    }
+    
+    function changeColour14() {
+       var element = document.getElementById("button14");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Nausea");
+    }
+    
+    function changeColour15() {
+       var element = document.getElementById("button15");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Sweating");
+    }
+    
+    function changeColour16() {
+       var element = document.getElementById("button16");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Fatigue");
+    }
+    
+    function changeColour17() {
+       var element = document.getElementById("button17");
+       element.classList.toggle("buttonActive");
+       symptoms.push("Joint pain");
+    }
+    
+    
+    
+    function display() {
+      document.getElementById("para").innerHTML = symptoms;
+      document.getElementById("btn").value = String(symptoms);
+    
+      document.getElementById("disname").innerHTML = "Common Cold";
+      document.getElementById("medname").innerHTML = "Crosine";
+      document.getElementById("dosname").innerHTML = "For 1 week, 2 tablets day and night after food";  
+      
+    }
+    function displayins() {
+      document.getElementById("prem").innerHTML = "Rs 2057.746"; 
+    }
+    
+    </script>
+
+
+</div>
+
+</body>
+</html>

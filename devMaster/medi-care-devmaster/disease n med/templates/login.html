@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #303641;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-login">
+        <form action="http://localhost:5000/login" method="POST">
+            <div class="input">
+                <input id="id" name=id placeholder="Enter Your ID" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div><br>
+            <input type="submit" value="Log In" />
+        </form>
+        <br>
+        <div class="forgot-password">
+            <a href="#">Not Registered??</a>
+        </div>
+    </div>
+</body>
+</html>

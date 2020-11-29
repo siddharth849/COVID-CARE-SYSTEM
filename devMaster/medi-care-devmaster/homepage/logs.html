@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<title>MediCaretaker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="dashboard.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.buttonActive{
+    background-color: rgb(0, 81, 255);
+}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: rgba(6, 57, 145, 0.781);}
+#main {margin-left: 120px}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-blue">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="MC LOGO.png" style="width:100%">
+  MEDICARETAKER
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#med" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>DISEASES AND MEDICINES</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>MEDICAL INSURANCE</p>
+  </a>
+  <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-drivers-license-o w3-xxlarge"></i>
+    <p>MEDICAL DASHBOARD</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-blue w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#med" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div align="center" class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <img src="MEDICARETAKER.png" alt="MediCaretaker">
+  <br>
+  <div class="main-container">
+    <!-- HEADER -->
+    <header class="block">
+        <ul class="header-menu horizontal-list">
+            <li>
+                <a class="header-menu-tab" href="#1"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#3"><span class="icon fontawesome-envelope scnd-font-color"></span>Messages</a>
+                <a class="header-menu-number" href="#4">5</a>
+            </li>
+            <li>
+                <a class="header-menu-tab" href="#5"><span class="icon fontawesome-star-empty scnd-font-color"></span>Favorites</a>
+            </li>
+        </ul>
+        <div class="profile-menu">
+            <p>J K VISHWAJEET <a href="#26"><span class="entypo-down-open scnd-font-color"></span></a></p>
+            <div class="profile-picture small-profile-picture">
+                <img width="40px" alt="Your picture" src="my image 2.jpg">
+            </div>
+        </div>
+    </header>
+
+    <!-- LEFT-CONTAINER -->
+    <div class="left-container container">
+        <div class="menu-box block"> <!-- MENU BOX (LEFT-CONTAINER) -->
+            <h2 class="titular">NOTIFICATIONS</h2>
+            <ul class="menu-box-menu">
+                <li>
+                    <a class="menu-box-tab" href="#6"><span class="icon fontawesome-envelope scnd-font-color"></span>Messages<div class="menu-box-number">24</div></a>                            
+                </li>
+                <li>
+                    <a class="menu-box-tab" href="#8"><span class="icon entypo-paper-plane scnd-font-color"></span>Requests<div class="menu-box-number">3</div></a>                            
+                </li>
+                <li>
+                    <a class="menu-box-tab" href="#10"><span class="icon entypo-calendar scnd-font-color"></span>Events<div class="menu-box-number">5</div></a>                            
+                </li>
+                <li>
+                    <a class="menu-box-tab" href="#12"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
+                </li>
+                <li>
+                    <a class="menu-box-tab" href="#13"><span class="icon entypo-chart-line scnd-font-color"></span>Statistics</a>
+                </li>                        
+            </ul>
+        </div>
+        <div class="donut-chart-block block"> <!-- DONUT CHART BLOCK (LEFT-CONTAINER) -->
+            <h2 class="titular">MY MEDICAL STATS</h2>
+            <div class="donut-chart">
+                <!-- DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+                <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
+                <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
+                <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+                <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+                <!-- END DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->    
+                <p class="center-date">2020-<br><span class="scnd-font-color">2021</span></p> 
+            </div>
+            <ul class="os-percentages horizontal-list">
+              <li>
+                <p class="mac os scnd-font-color">Healthy</p>
+                <p class="os-percentage">48<sup>%</sup></p>
+            </li>  
+              <li>
+                    <p class="ios os scnd-font-color">Severe</p>
+                    <p class="os-percentage">21<sup>%</sup></p>
+                </li>
+                
+                <li>
+                    <p class="linux os scnd-font-color">Medium</p>
+                    <p class="os-percentage">9<sup>%</sup></p>
+                </li>
+                <li>
+                    <p class="win os scnd-font-color">Mild</p>
+                    <p class="os-percentage">32<sup>%</sup></p>
+                </li>
+            </ul>
+        </div>
+        <div class="line-chart-block block clear"> <!-- LINE CHART BLOCK (LEFT-CONTAINER) -->
+            <div class="line-chart">
+              <!-- LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+                <div class='grafico'>
+                   <ul class='eje-y'>
+                     <li data-ejeY='30'></li>
+                     <li data-ejeY='20'></li>
+                     <li data-ejeY='10'></li>
+                     <li data-ejeY='0'></li>
+                   </ul>
+                   <ul class='eje-x'>
+                     <li>July</li>
+                     <li>Aug</li>
+                     <li>Sept</li>
+                   </ul>
+                     <span data-valor='25'>
+                       <span data-valor='8'>
+                         <span data-valor='13'>
+                           <span data-valor='5'>   
+                             <span data-valor='23'>   
+                             <span data-valor='12'>
+                                 <span data-valor='15'>
+                                 </span></span></span></span></span></span></span>
+                </div>
+                <!-- END LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+            </div>
+            <ul class="time-lenght horizontal-list">
+                <li><a class="time-lenght-btn" href="#14">Week</a></li>
+                <li><a class="time-lenght-btn" href="#15">Month</a></li>
+                <li><a class="time-lenght-btn" href="#16">Year</a></li>
+            </ul>
+            <ul class="month-data clear">
+                <li>
+                    <p>JULY<span class="scnd-font-color"> 2020</span></p>
+                    <p><span class="entypo-plus increment"> </span>21<sup>%</sup></p>
+                </li>
+                <li>
+                    <p>AUGEST<span class="scnd-font-color"> 2020</span></p>
+                    <p><span class="entypo-plus increment"> </span>48<sup>%</sup></p>
+                </li>
+                <li>
+                    <p>SEPTEMBER<span class="scnd-font-color"> 2020</span></p>
+                    <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MIDDLE-CONTAINER -->
+    <div class="middle-container container">
+        <div class="profile block"> <!-- PROFILE (MIDDLE-CONTAINER) -->
+            <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
+            <div class="profile-picture big-profile-picture clear">
+                <img width="150px" alt="My picture" src="my image 2.jpg" >
+            </div>
+            <h1 class="user-name">J K VISHWAJEET</h1>
+            <div class="profile-description">
+                <p class="scnd-font-color">Living in Navi Mumbai</p>
+            </div>
+            <ul class="profile-options horizontal-list">
+                <li><a class="comments" href="#40"><p><span class="icon fontawesome-comment-alt scnd-font-color"></span>23</li></p></a>
+                <li><a class="views" href="#41"><p><span class="icon fontawesome-eye-open scnd-font-color"></span>541</li></p></a>
+                <li><a class="likes" href="#42"><p><span class="icon fontawesome-heart-empty scnd-font-color"></span>49</li></p></a>
+            </ul>
+        </div>
+        <div class="weather block clear"> <!-- WEATHER (MIDDLE-CONTAINER) -->
+            <h2 class="titular"><span class="icon entypo-thermometer"></span><strong>Body Temperature</strong></h2>
+            <div class="current-day">
+                <p class="current-day-date">FRI 03/10</p>
+                <p class="current-day-temperature">98º<span class="icon-cloudy"></span></p>
+            </div>
+            <ul class="next-days">
+                <li>
+                    <a href="#43">
+                        <p class="next-days-date"><span class="day">SAT</span> <span class="scnd-font-color">02/10</span></p>
+                        <p class="next-days-temperature">97º<span class="icon icon-cloudy scnd-font-color"></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#44">
+                        <p class="next-days-date"><span class="day">SUN</span> <span class="scnd-font-color">01/10</span></p>
+                        <p class="next-days-temperature">94º<span class="icon icon-cloudy2 scnd-font-color"></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#45">
+                        <p class="next-days-date"><span class="day">MON</span> <span class="scnd-font-color">30/09</span></p>
+                        <p class="next-days-temperature">96º<span class="icon icon-cloudy2 scnd-font-color"></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#46">
+                        <p class="next-days-date"><span class="day">TUE</span> <span class="scnd-font-color">29/09</span></p>
+                        <p class="next-days-temperature">97º<span class="icon icon-cloudy scnd-font-color"></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="next-days-date"><span class="day">WED</span> <span class="scnd-font-color">28/09</span></p>
+                        <p class="next-days-temperature">99º<span class="icon icon-sun scnd-font-color"></span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="next-days-date"><span class="day">THU</span> <span class="scnd-font-color">27/09</span></p>
+                        <p class="next-days-temperature">98º<span class="icon icon-sun scnd-font-color"></span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="media block"> <!-- MEDIA (LEFT-CONTAINER) -->
+          <div id="media-display">
+              <video src="donation scene.mp4" style="height: 170px;"></video>
+          </div>
+          <div class="media-control-bar">
+              <a class="media-btn play" href="#23"><span class="fontawesome-play scnd-font-color"></span></a>
+              <p class="time-passed">4:15 <span class="time-duration scnd-font-color">/ 9:23</span></p>
+              <a class="media-btn volume" href="#24"><span class="fontawesome-volume-up scnd-font-color"></span></a>
+              <a class="media-btn resize" href="#25"><span class="fontawesome-resize-full scnd-font-color"></span></a>
+          </div>
+      </div>
+        
+      
+ 
+        
+    </div>
+
+    <!-- RIGHT-CONTAINER -->
+    <div class="right-container container">
+        <div class="join-newsletter block"> <!-- JOIN NEWSLETTER (RIGHT-CONTAINER) -->
+            <h2 class="titular">JOIN THE NEWSLETTER</h2>
+            <div class="input-container">
+                <input type="text" placeholder="yourname@gmail.com" class="email text-input">
+                <div class="input-icon envelope-icon-newsletter"><span class="fontawesome-envelope scnd-font-color"></span></div>
+            </div>
+            <a class="subscribe button" href="#21">SUBSCRIBE</a>
+        </div>
+        <div class="account block"> <!-- ACCOUNT (RIGHT-CONTAINER) -->
+            <h2 class="titular">ACCESS YOUR REPORTS</h2>
+            <div class="input-container">
+                <input type="text" placeholder="User Id" class="email text-input">
+                <div class="input-icon envelope-icon-acount"><span class="fontawesome-envelope scnd-font-color"></span></div>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="Password" class="password text-input">
+                <div class="input-icon password-icon"><span class="fontawesome-lock scnd-font-color"></span></div>
+            </div>
+            <a class="sign-in button" href="#22">SIGN IN</a>
+            <p class="scnd-font-color">Forgot Password?</p>
+        </div>
+        <div class="loading block"> <!-- LOADING (RIGHT-CONTAINER) -->
+            <div class="progress-bar downloading"></div>
+            <p><span class="icon fontawesome-cloud-download scnd-font-color"></span>Online Consultation</p>
+            <p class="percentage">81<sup>%</sup></p>
+            <div class="progress-bar uploading"></div>
+            <p><span class="icon fontawesome-cloud-upload scnd-font-color"></span>Offline Consultations</p>
+            <p class="percentage">43<sup>%</sup></p>
+        </div>
+        <div class="calendar-day block"> <!-- CALENDAR DAY (RIGHT-CONTAINER) -->
+            <div class="arrow-btn-container">
+                <a class="arrow-btn left" href="#200"><span class="icon fontawesome-angle-left"></span></a>
+                <h2 class="titular">SUNDAY</h2>
+                <a class="arrow-btn right" href="#201"><span class="icon fontawesome-angle-right"></span></a>
+            </div>
+                <p class="the-day">04</p>
+                <a class="add-event button" href="#27">ADD EVENT</a>
+        </div>
+    </div> <!-- end right-container -->
+    <div>
+      <div class="weather block clear"> <!-- WEATHER (MIDDLE-CONTAINER) -->
+        <h2 class="titular"><span class="icon entypo-archive"></span><strong>YOUR DOCTORS INFORMATION</strong></h2>
+        <ul class="next-days">
+            <li>
+                <a href="#44">
+                    <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Rootex</span> <span class="scnd-font-color">
+                      <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+                      <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+                      <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+                    </span></p>
+                </a>
+            </li>
+            <li>
+              <a href="#44">
+                  <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Alex</span> <span class="scnd-font-color">
+                    <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+                    <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+                    <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+                  </span></p>
+              </a>
+          </li>
+          <li>
+            <a href="#44">
+                <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Alexa</span> <span class="scnd-font-color">
+                  <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+                  <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+                  <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+                </span></p>
+            </a>
+        </li>
+        <li>
+          <a href="#44">
+              <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Anita</span> <span class="scnd-font-color">
+                <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+                <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+                <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+              </span></p>
+          </a>
+      </li>
+      <li>
+        <a href="#44">
+            <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Vishwajeet</span> <span class="scnd-font-color">
+              <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+              <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+              <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+            </span></p>
+        </a>
+    </li>
+    <li>
+      <a href="#44">
+          <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Reena</span> <span class="scnd-font-color">
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+          </span></p>
+      </a>
+    </li>
+    <li>
+      <a href="#44">
+          <p class="next-days-date" style="font-size: xx-large;"><span class="day">Dr.Taara</span> <span class="scnd-font-color">
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Schedule</button>
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Contact</button>
+            <button style="height: 50px;border-radius: 20px;font-size: small;">View Clinic</button>
+          </span></p>
+      </a>
+    </li>
+    
+        </ul>
+    </div>
+    </div>
+</div> <!-- end main-container -->
+
+    
+</div>
+
+</body>
+</html>
